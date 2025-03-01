@@ -6,6 +6,7 @@ Ejercicio 2 Encomiendas Express: implementa un sistema de cálculo de costos par
 ![image](https://github.com/user-attachments/assets/a036f616-ddb4-4d07-a67b-58a5266829ce)
 
 Ejercicio 3 alquiler de jet privados:es un programa que gestiona el alquiler de jets mediante una interfaz gráfica simple con JOptionPane. Solicita al usuario su nombre, apellidos, el tipo de jet que desea alquilar (Light Jet o Super Jet) y la cantidad de horas requeridas. Según la selección, asigna una tarifa por hora ($3000 para el Light Jet y $4500 para el Super Jet). Luego, calcula un descuento basado en la cantidad de horas alquiladas (desde un 15% para 4-8 horas hasta un 30% para más de 17 horas). Finalmente, muestra un resumen con los datos ingresados, el precio sin descuento, el porcentaje de descuento aplicado y el monto total a pagar.
+
 ![image](https://github.com/user-attachments/assets/a2925d2f-cb44-4992-a5bc-fa7a1dc72ac0)
 
 Ejericicio 4 Descuento de matricula: calcula el costo de matrícula de un estudiante según su edad y tipo de ingreso. Solicita al usuario su nombre, apellido, tipo de ingreso (Antiguo Ingreso o Nuevo Ingreso) y edad. Luego, determina el valor base de la matrícula según la edad y aplica un descuento del 25% si el estudiante es de antiguo ingreso. Finalmente, muestra un resumen con el costo inicial, el descuento aplicado y el valor final de la matrícula. 
