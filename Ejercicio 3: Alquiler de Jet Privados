@@ -1,0 +1,62 @@
+import javax.swing.JOptionPane;
+
+public class alquilerjets {
+    public static void main(String[] args) {
+        // Aqui se Crean las variables principales
+        String nombre;
+        String apellidos;
+        String tipoJet;
+        int horas;
+        double precioPorHora = 0 ;
+        double descuento = 0;
+        double precioFinal,montoTotal;
+
+        // Aqui se introduciran los nombres y apellidos del cliente
+        nombre = JOptionPane.showInputDialog("Ingrese el nombre del cliente:");
+        apellidos = JOptionPane.showInputDialog("Ingrese los apellidos del cliente:");
+
+        // Aqui se escribe cual de los des jet quiere
+        tipoJet = JOptionPane.showInputDialog("Digite el nombre del jet que quieres solisitar\n(Light Jet o Super Jet):");
+
+        // aquyi se digita las horas que necesita el jet
+        horas = Integer.parseInt(JOptionPane.showInputDialog("Digite las horas solicitadas para el alquiler del jet:"));
+
+        // aqui dependiendo del jet que escojas el precio
+        if (tipoJet.equalsIgnoreCase("Light Jet")) {
+            precioPorHora = 3000;
+        } else if (tipoJet.equalsIgnoreCase("Super Jet")) {
+            precioPorHora = 4500;
+        } else {
+            JOptionPane.showMessageDialog(null, "No se encontro su Jet. El programa finalizará.");
+            return;  // Aqui se temina el programa si no escribio ninguno de los dos jets
+        }
+
+        // aqui se Calcular el descuento según las horas
+        if (horas >= 4 && horas <= 8) {
+            descuento = 0.15;  // 15% de descuento
+        } else if (horas >= 9 && horas <= 12) {
+            descuento = 0.20;  // 20% de descuento
+        } else if (horas >= 13 && horas <= 16) {
+            descuento = 0.25;  // 25% de descuento
+        } else if (horas >= 17) {
+            descuento = 0.30;  // 30% de descuento
+        } else {
+            descuento = 0;  // No hay descuento si son menos de 4 horas
+        }
+
+        // aqui se calcular el precio final con descuento
+        precioFinal = precioPorHora * horas;
+        montoTotal = precioFinal - (precioFinal * descuento);
+
+        // aqui se mustrar la informacon del toda la informacion y el total que quiere
+        String mensaje = "Información de alquiler de jet\n";
+        mensaje += "Nombre del cliente: " + nombre + " " + apellidos + "\n";
+        mensaje += "Tipo de jet alquilado: " + tipoJet + "\n";
+        mensaje += "Cantidad de horas: " + horas + "\n";
+        mensaje += "Precio del alquiler (sin descuento): $" + precioFinal + "\n";
+        mensaje += "Descuento aplicado: " + (descuento * 100) + "%\n";
+        mensaje += "Monto total a pagar: $" + montoTotal;
+
+        JOptionPane.showMessageDialog(null, mensaje);
+    }
+}
